@@ -18,11 +18,14 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
+    @GetMapping("/test")
+    public String test() {
+        return "Backend is working!";
+    }
+
     @PostMapping("/send")
     public Map<String, String> sendEmail(@RequestBody EmailRequest request) {
-
         emailService.sendEmail(request);
-
         return Map.of("message", "Email sent successfully!");
     }
 }
