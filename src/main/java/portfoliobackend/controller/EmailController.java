@@ -7,8 +7,10 @@ import java.util.Map;
 import portfoliobackend.model.EmailRequest;
 import portfoliobackend.service.EmailService;
 
-@CrossOrigin(origins = "http://localhost:4200")
-@RestController
+@CrossOrigin(origins = {
+        "http://localhost:4200",
+        "https://thembeka1.github.io"
+})
 @RequestMapping("/api/email")
 public class EmailController {
 
