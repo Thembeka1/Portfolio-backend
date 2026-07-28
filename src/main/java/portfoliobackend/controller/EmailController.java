@@ -11,9 +11,9 @@ import portfoliobackend.service.EmailService;
         "http://localhost:4200",
         "https://thembeka1.github.io"
 })
+@RestController
 @RequestMapping("/api/email")
 public class EmailController {
-
 
     @Autowired
     private EmailService emailService;
